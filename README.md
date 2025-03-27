@@ -26,6 +26,16 @@ This digital version provides a user-friendly way to experience this cultural pr
       
 * **Win Conditions:** The game includes two win conditions. All four shagai are different, or all four shagai are horses.
     * Implementation: `Shagai.cs`, lines within `button1_Click` where the results are checked using `.Distinct().Count() == 4` and `.All(r => r == ShagaiFace.Horse)`.
+* **Manu Strips:** The Manu Strip provides quick navigation and includes three main options:
+
+         **Exit:** Closes the application.
+            * Implementation: exToolStripMenuItem_Click method handles the exit functionality using: Application.Exit();
+         **Shagai Game:** Displays an introduction to Shagai fortune telling, including its cultural and historical significance.
+            * Implementation: shagaiGameToolStripMenuItem_Click method creates an introductionText string and shows it using:
+               MessageBox.Show(introductionText, "Introduction of Shagai Fortune Telling Game"); 
+         **Rules:** Displays the game rules and guides the player through gameplay mechanics.
+         * Implementation: ruleToolStripMenuItem_Click method creates a rulesText string and shows it using: MessageBox.Show(rulesText, "Game Rules");
+
 
 ## How to Run
 
